@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+$primary_color: #26BAA4;
+$gray_dark: #4C545D;
+$gray_light: #9FABB2;
+$primary_font: "Bai Jamjuree", sans-serif;
+ 
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+ 
+html {
+    font-size: 62.5%;
+}
+ 
+body {
+    box-sizing: border-box;
+    font-size: 1.8rem;
+    font-family: $primary_font;
+}
