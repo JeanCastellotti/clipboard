@@ -16,3 +16,54 @@ body {
   font-size: 1.8rem;
   font-family: "Bai Jamjuree", sans-serif;
 }
+
+.header {
+  height: 36rem;
+  background-image: url("images/bg-header-desktop.png");
+  background-size: cover;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 144rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.hero__left {
+  align-self: center;
+  justify-self: center;
+}
+.hero__right {
+  position: relative;
+  bottom: -2rem;
+  z-index: 0;
+}
+.hero__heading {
+  color: #4C545D;
+  font-size: 3.6rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  width: 40rem;
+}
+.hero__subtitle {
+  color: #9FABB2;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 1.5rem 3.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.btn--primary {
+  background-color: #26BAA4;
+  color: #FFF;
+}
