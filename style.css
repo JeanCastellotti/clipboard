@@ -54,10 +54,37 @@ body {
   margin-bottom: 2rem;
 }
 
+.desktop,
+.mobile {
+  padding: 20rem 0;
+}
+.desktop__picture,
+.mobile__picture {
+  width: 40rem;
+}
+.desktop__heading,
+.mobile__heading {
+  font-size: 2.6rem;
+  color: #26BAA4;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.desktop__paragraph,
+.mobile__paragraph {
+  color: #4C545D;
+  line-height: 4rem;
+}
+.desktop .container,
+.mobile .container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
 .desktop {
   position: relative;
   background-color: #FAFAFA;
-  padding: 20rem 0;
 }
 .desktop__left {
   justify-self: center;
@@ -65,24 +92,12 @@ body {
 .desktop__right {
   align-self: center;
 }
-.desktop__heading {
-  font-size: 2.6rem;
-  color: #26BAA4;
-  font-weight: 600;
-  margin-bottom: 2rem;
+
+.mobile__left {
+  align-self: center;
 }
-.desktop__paragraph {
-  color: #4C545D;
-  line-height: 4rem;
-}
-.desktop__picture {
-  width: 40rem;
-}
-.desktop .container {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2rem;
-  padding: 0 2rem;
+.mobile__right {
+  justify-self: center;
 }
 
 .btn {
