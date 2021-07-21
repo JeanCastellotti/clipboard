@@ -77,9 +77,19 @@ body {
     padding: 1.5rem 3.5rem;
     text-transform: uppercase;
     font-weight: bold;
+    cursor: pointer;
+    transition: transform .2s;
+
+    &:hover {
+        transform: scale(1.03);
+    }
 
     &--primary {
         background-color: $primary_color;
         color: #FFF;
+
+        &:active {
+            background-color: lighten($primary_color, 3%);
+        }
     }
 }

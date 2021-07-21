@@ -62,8 +62,16 @@ body {
   padding: 1.5rem 3.5rem;
   text-transform: uppercase;
   font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.btn:hover {
+  transform: scale(1.03);
 }
 .btn--primary {
   background-color: #26BAA4;
   color: #FFF;
+}
+.btn--primary:active {
+  background-color: #29c7af;
 }
