@@ -55,9 +55,11 @@ body {
 }
 
 .desktop,
-.mobile {
+.mobile,
+.features {
   padding: 20rem 0;
 }
+
 .desktop__picture,
 .mobile__picture {
   width: 40rem;
@@ -82,9 +84,13 @@ body {
   padding: 0 2rem;
 }
 
+.desktop,
+.features {
+  background-color: #FAFAFA;
+}
+
 .desktop {
   position: relative;
-  background-color: #FAFAFA;
 }
 .desktop__left {
   justify-self: center;
@@ -98,6 +104,27 @@ body {
 }
 .mobile__right {
   justify-self: center;
+}
+
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4rem;
+  padding: 0 2rem;
+}
+.features__item {
+  text-align: center;
+}
+.features__icon {
+  height: 4rem;
+  margin-bottom: 2rem;
+}
+.features__icon svg {
+  fill: #4C545D;
+}
+.features__paragraph {
+  color: #9FABB2;
+  line-height: 4rem;
 }
 
 .btn {

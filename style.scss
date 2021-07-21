@@ -68,9 +68,13 @@ body {
 }
 
 .desktop,
-.mobile {    
-    padding: 20rem 0;    
+.mobile,
+.features {
+    padding: 20rem 0;  
+}
 
+.desktop,
+.mobile {      
     &__picture {
         width: 40rem;
     }    
@@ -95,9 +99,13 @@ body {
     }
 }
 
+.desktop,
+.features {
+    background-color: $gray_light2;
+}
+
 .desktop {
     position: relative;
-    background-color: $gray_light2;
 
     &__left {
         justify-self: center;
@@ -116,6 +124,33 @@ body {
 
     &__right {
         justify-self: center;
+    }
+}
+
+.features {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 4rem;
+        padding: 0 2rem;
+    }
+
+    &__item {
+        text-align: center;
+    }
+
+    &__icon {
+        height: 4rem;
+        margin-bottom: 2rem;
+        
+        svg {
+            fill: $gray_dark;
+        }
+    }
+
+    &__paragraph {
+        color: $gray_light;
+        line-height: 4rem;
     }
 }
 
