@@ -38,6 +38,7 @@ body {
   position: relative;
   bottom: -2rem;
   z-index: 0;
+  justify-self: center;
 }
 .hero__heading {
   color: #4C545D;
@@ -51,6 +52,37 @@ body {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 2rem;
+}
+
+.desktop {
+  position: relative;
+  background-color: #FAFAFA;
+  padding: 20rem 0;
+}
+.desktop__left {
+  justify-self: center;
+}
+.desktop__right {
+  align-self: center;
+}
+.desktop__heading {
+  font-size: 2.6rem;
+  color: #26BAA4;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.desktop__paragraph {
+  color: #4C545D;
+  line-height: 4rem;
+}
+.desktop__picture {
+  width: 40rem;
+}
+.desktop .container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  padding: 0 2rem;
 }
 
 .btn {
@@ -74,4 +106,9 @@ body {
 }
 .btn--primary:active {
   background-color: #29c7af;
+}
+
+.container {
+  max-width: 144rem;
+  margin: 0 auto;
 }
