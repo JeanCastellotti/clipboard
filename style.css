@@ -261,6 +261,10 @@ body {
     flex-direction: column;
   }
 }
+.footer__social-network {
+  display: flex;
+  align-items: center;
+}
 @media (max-width: 40em) {
   .footer__social-network {
     order: -1;

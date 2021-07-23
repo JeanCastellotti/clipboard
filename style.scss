@@ -274,6 +274,8 @@ body {
     }
 
     &__social-network {
+        display: flex;
+        align-items: center;
 
         @media (max-width: 40em) {
            order: -1;
