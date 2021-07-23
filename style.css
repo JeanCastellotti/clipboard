@@ -22,30 +22,66 @@ body {
   background-image: url("images/bg-header-desktop.png");
   background-size: cover;
 }
+@media (max-width: 66.5em) {
+  .header {
+    height: auto;
+  }
+}
 
 .hero {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  max-width: 144rem;
+  max-width: 102.4rem;
   margin: 0 auto;
   padding: 0 2rem;
+  height: 100%;
+}
+@media (max-width: 66.5em) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
 }
 .hero__left {
-  align-self: center;
+  align-self: flex-end;
   justify-self: center;
+  padding-bottom: 5rem;
+}
+@media (max-width: 66.5em) {
+  .hero__left {
+    text-align: center;
+    padding-bottom: 0;
+    padding-top: 5rem;
+  }
 }
 .hero__right {
   position: relative;
-  bottom: -2rem;
+  bottom: -2.5rem;
   z-index: 0;
   justify-self: center;
+  align-self: flex-end;
+}
+.hero__picture {
+  width: 100%;
+}
+@media (max-width: 40em) {
+  .hero__picture {
+    display: none;
+  }
+}
+.hero__picture-mobile {
+  display: none;
+}
+@media (max-width: 40em) {
+  .hero__picture-mobile {
+    display: block;
+  }
 }
 .hero__heading {
   color: #4C545D;
   font-size: 3.6rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
-  width: 40rem;
+  max-width: 40rem;
 }
 .hero__subtitle {
   color: #9FABB2;
@@ -56,13 +92,30 @@ body {
 
 .desktop,
 .mobile,
-.features {
+.features,
+.companies,
+.download {
   padding: 20rem 0;
+}
+@media (max-width: 66.5em) {
+  .desktop,
+.mobile,
+.features,
+.companies,
+.download {
+    padding: 10rem 0;
+  }
 }
 
 .desktop__picture,
 .mobile__picture {
   width: 40rem;
+}
+@media (max-width: 40em) {
+  .desktop__picture,
+.mobile__picture {
+    width: 100%;
+  }
 }
 .desktop__heading,
 .mobile__heading {
@@ -81,7 +134,12 @@ body {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem;
-  padding: 0 2rem;
+}
+@media (max-width: 66.5em) {
+  .desktop .container,
+.mobile .container {
+    grid-template-columns: 1fr;
+  }
 }
 
 .desktop,
@@ -98,19 +156,38 @@ body {
 .desktop__right {
   align-self: center;
 }
+@media (max-width: 66.5em) {
+  .desktop__right {
+    text-align: center;
+  }
+}
 
 .mobile__left {
   align-self: center;
 }
+@media (max-width: 66.5em) {
+  .mobile__left {
+    text-align: center;
+  }
+}
 .mobile__right {
   justify-self: center;
+}
+@media (max-width: 66.5em) {
+  .mobile__right {
+    order: -1;
+  }
 }
 
 .features .container {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 4rem;
-  padding: 0 2rem;
+}
+@media (max-width: 66.5em) {
+  .features .container {
+    grid-template-columns: 1fr;
+  }
 }
 .features__item {
   text-align: center;
@@ -125,6 +202,80 @@ body {
 .features__paragraph {
   color: #9FABB2;
   line-height: 4rem;
+}
+
+.companies__title {
+  color: #26BAA4;
+  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: 10rem;
+}
+.companies__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 4rem;
+  justify-items: center;
+}
+@media (max-width: 66.5em) {
+  .companies__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 40em) {
+  .companies__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.download {
+  background-color: #26BAA4;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.download__title {
+  margin-bottom: 5rem;
+  color: #FFF;
+  font-size: 3.4rem;
+  width: 40%;
+}
+@media (max-width: 66.5em) {
+  .download__title {
+    width: 100%;
+  }
+}
+
+.footer {
+  padding: 10rem 0;
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 40em) {
+  .footer .container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 40em) {
+  .footer__social-network {
+    order: -1;
+    margin-bottom: 5rem;
+  }
+}
+.footer__social-network a {
+  text-decoration: none;
+}
+.footer__social-network a:not(:last-child) {
+  margin-right: 5rem;
+}
+.footer__social-network img {
+  width: 48px;
+  height: auto;
 }
 
 .btn {
@@ -149,8 +300,16 @@ body {
 .btn--primary:active {
   background-color: #29c7af;
 }
+.btn--white {
+  background-color: #FFF;
+  color: #26BAA4;
+}
+.btn--white:active {
+  transform: translateY(5px);
+}
 
 .container {
-  max-width: 144rem;
+  max-width: 102.4rem;
   margin: 0 auto;
+  padding: 0 2rem;
 }

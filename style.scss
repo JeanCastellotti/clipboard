@@ -30,25 +30,58 @@ body {
     height: 36rem;
     background-image: url('images/bg-header-desktop.png');
     background-size: cover;
+
+    @media (max-width: 66.5em) {
+        height: auto;
+    }
 }
 
 .hero {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));    
-    max-width: 144rem;
+    max-width: 102.4rem;
     margin: 0 auto;
     padding: 0 2rem;
+    height: 100%;
+
+    @media (max-width: 66.5em) {
+        grid-template-columns: 1fr;
+    }
 
     &__left {
-        align-self: center;
+        align-self: flex-end;
         justify-self: center;
+        padding-bottom: 5rem;
+
+        @media (max-width: 66.5em) {
+            text-align: center;
+            padding-bottom: 0;
+            padding-top: 5rem;
+        }
     }
 
     &__right {
         position: relative;
-        bottom: -2rem;
+        bottom: -2.5rem;
         z-index: 0;
         justify-self: center;
+        align-self: flex-end;
+    }
+
+    &__picture {
+        width: 100%;
+
+        @media (max-width: 40em) {
+            display: none;
+        }
+    }
+
+    &__picture-mobile {
+        display: none;
+
+        @media (max-width: 40em) {
+            display: block;
+        }
     }
 
     &__heading {
@@ -56,7 +89,7 @@ body {
         font-size: 3.6rem;
         font-weight: 400;
         margin-bottom: .5rem;
-        width: 40rem;
+        max-width: 40rem;
     }
 
     &__subtitle {
@@ -69,14 +102,24 @@ body {
 
 .desktop,
 .mobile,
-.features {
-    padding: 20rem 0;  
+.features,
+.companies,
+.download {
+    padding: 20rem 0; 
+    
+    @media (max-width: 66.5em) {
+        padding: 10rem 0;
+    }
 }
 
 .desktop,
 .mobile {      
     &__picture {
         width: 40rem;
+
+        @media (max-width: 40em) {
+            width: 100%;
+        }
     }    
 
     &__heading {
@@ -95,7 +138,10 @@ body {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 2rem;    
-        padding: 0 2rem;    
+
+        @media (max-width: 66.5em) {
+            grid-template-columns: 1fr;
+        }
     }
 }
 
@@ -113,6 +159,10 @@ body {
 
     &__right {
         align-self: center;
+
+        @media (max-width: 66.5em) {
+            text-align: center;
+        }
     }
 }
 
@@ -120,10 +170,18 @@ body {
 
     &__left {
         align-self: center;
+
+        @media (max-width: 66.5em) {
+            text-align: center;
+        }
     }
 
     &__right {
         justify-self: center;
+
+        @media (max-width: 66.5em) {
+            order: -1;
+        }
     }
 }
 
@@ -132,7 +190,10 @@ body {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 4rem;
-        padding: 0 2rem;
+
+        @media (max-width: 66.5em) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__item {
@@ -151,6 +212,85 @@ body {
     &__paragraph {
         color: $gray_light;
         line-height: 4rem;
+    }
+}
+
+.companies {
+    &__title {
+        color: $primary_color;
+        font-size: 2.6rem;
+        text-align: center;
+        margin-bottom: 10rem;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 4rem;
+        justify-items: center;
+
+        @media (max-width: 66.5em) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @media (max-width: 40em) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.download {
+    background-color: $primary_color;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    &__title {
+        margin-bottom: 5rem;
+        color: #FFF;
+        font-size: 3.4rem;
+        width: 40%;
+
+        @media (max-width: 66.5em) {
+            width: 100%;
+        }
+    }
+}
+
+.footer {
+    padding: 10rem 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 40em) {
+            flex-direction: column;
+        }
+    }
+
+    &__social-network {
+
+        @media (max-width: 40em) {
+           order: -1;
+           margin-bottom: 5rem;
+        }
+
+        a {
+            text-decoration: none;
+            &:not(:last-child) {
+                margin-right: 5rem;
+            }
+        }
+
+        img {
+            width: 48px;
+            height: auto;
+        }
     }
 }
 
@@ -180,11 +320,21 @@ body {
             background-color: lighten($primary_color, 3%);
         }
     }
+
+    &--white {
+        background-color: #FFF;
+        color: $primary_color;
+
+        &:active {
+            transform: translateY(5px);
+        }
+    }
 }
 
 // Utilities
 
 .container {
-    max-width: 144rem;
+    max-width: 102.4rem;
     margin: 0 auto;
+    padding: 0 2rem;    
 }
