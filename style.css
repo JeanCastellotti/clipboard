@@ -27,6 +27,11 @@ body {
     height: auto;
   }
 }
+@media (max-width: 40em) {
+  .header {
+    background-image: url("images/bg-header-mobile.png");
+  }
+}
 
 .hero {
   display: grid;
@@ -228,13 +233,20 @@ body {
 }
 
 .download {
-  background-color: #26BAA4;
+  background: url("images/bg-header-desktop.png"), #26BAA4;
+  background-size: cover;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-left: 2rem;
   padding-right: 2rem;
+}
+@media (max-width: 40em) {
+  .download {
+    background: url("images/bg-header-mobile.png"), #26BAA4;
+    background-size: cover;
+  }
 }
 .download__title {
   margin-bottom: 5rem;
