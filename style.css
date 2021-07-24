@@ -75,6 +75,7 @@ body {
 }
 .hero__picture-mobile {
   display: none;
+  width: 100%;
 }
 @media (max-width: 40em) {
   .hero__picture-mobile {

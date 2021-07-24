@@ -82,6 +82,7 @@ body {
 
     &__picture-mobile {
         display: none;
+        width: 100%;
 
         @media (max-width: 40em) {
             display: block;
